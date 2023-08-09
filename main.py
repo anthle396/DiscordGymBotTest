@@ -17,14 +17,22 @@ pullup_PR = ""
 pushup_PR = ""
 name = ""
 
-# Dict Var for userPRs
-userPRs_dict = {"User":name,"Bench":bench_PR, "Squat":squat_PR, "Deadlift":deadlift_PR, "Pullups":pullup_PR, "Pushups":pushup_PR}
-
 # Activates client or smth idk
 intents = discord.Intents.default()
 intents.messages = True
 client = discord.Client(intents=intents)
 
+# Dict Var for userPRs
+userPRs_dict = {
+  "User": None,
+  "Bench": None,
+  "Squat": None, 
+  "Deadlift": None, 
+  "Pullups": None, 
+  "Pushups": None
+}
+
+user_states = {}
 # Informs client that bot is online
 @client.event
 async def on_ready():
@@ -40,6 +48,16 @@ async def on_message(message):
   # lowercases user command cause bot is dumb as fuck
   msg = (message.content).lower()
   
+  if message.author.id in user_states:
+    state = user_states[message.author.id]
+    if state == 'bench' and msg.startswith('!pr'):
+      userPRs_dict["Bench"] = msg.split(' ')[1]
+      userPRs_dict["User"] = message.author.mention
+      
+      await message.channel.send("{} PR for bench is:{}".format(userPRs_dict["User"],userPRs_dict["Bench"]))
+      del user_states[message.author.id]
+      return
+      
   # Displays all the commands that the bot can use
   if msg.startswith('!help'):
     help_var = '### "!help" - Displays the commands that can be used.' + '\n### "!hello" - Displays hello to the you.' + '\n### "storepr" - Stores your workout PRs. # Note work in progress' + '\n ### "displaypr [user]" - Displays user\'s PR\'s. # Note work in progress`'
@@ -54,52 +72,56 @@ async def on_message(message):
     await message.channel.send(f'### Hello there {message.author.mention}! what PR would you like to store:')
     await message.channel.send(f'### `[!Bench, !Squat, !Deadlift, !Pullups, !Pushups]`')
     
-    @client.event
-    async def on_message(message):
-      if message.author == client.user:
-        return
-    
-      # lowercases user command cause bot is dumb as fuck
-      msg = (message.content).lower()
+    msg = (message.content).lower()
       
-      if msg == "!bench" or msg == "!squat" or msg == "!deadlift" or msg == "!pullups" or msg == "!pushups":
-        if msg.startswith('!bench'):
-          await message.channel.send('### You have chosen bench. Enter your PR (!pr "num"):')
+      #if msg == "!bench" or msg == "!squat" or msg == "!deadlift" or msg == "!pullups" or msg == "!pushups":
+  elif msg == '!bench':
+      user_states[message.author.id] = 'bench'
+      await message.channel.send('### You have chosen bench. Enter your PR (!pr "num"):')
 
-          # Supposedly stops infinite loop
-          @client.event
-          async def on_message(message):
-            if message.author == client.user:
-              return
+      '''# Supposedly stops infinite loop
+      @client.event
+      async def on_message(message):
+        if message.author == client.user:
+          return
 
-            # lowercases user command cause bot is dumb as fuck
-            msg = (message.content).lower()
-            
-            input_text = msg
-            keyword = "!pr"
-            index = input_text.find(keyword)
-            
-            if index != -1:
-                pr_var = keyword
-                remaining_text = input_text[index + len(keyword):].strip()
-                bench_PR = remaining_text
-            else:
-                pr_var = None
-                bench_PR = None
+        # lowercases user command cause bot is dumb as fuck
+        msg = (message.content).lower()
+        
+        input_text = msg
+        keyword = "!pr"
+        index = input_text.find(keyword)
+        
+        if index != -1:
+            pr_var = keyword
+            remaining_text = input_text[index + len(keyword):].strip()
+            bench_PR = remaining_text
+        else:
+            pr_var = None
+            bench_PR = None
 
-            if pr_var == "!pr":
-              userPRs_dict["Bench"] = bench_PR
-              userPRs_dict["User"] = message.author.mention
-              
-            await message.channel.send("{} PR for bench is: {}".format(userPRs_dict["User"],userPRs_dict["Bench"]))
+        if pr_var == "!pr":
+          userPRs_dict["Bench"] = bench_PR
+          userPRs_dict["User"] = message.author.mention
+          
+        await message.channel.send("{} PR for bench is: {}".format(userPRs_dict["User"],userPRs_dict["Bench"]))'''
             
 
   # hidden easter egg
   elif msg.startswith('!fuck you') or msg.startswith('!fuckyou'):
     await message.channel.send(f'### NO FUCK YOU {message.author.mention} BITCH!')
 
-
-
+  elif msg.startswith('!stats'):
+    if userPRs_dict['User']:
+      await message.channel.send(f'Stats for {userPRs_dict["User"]}')
+      
+      for lift in userPRs_dict:
+        if lift != 'User':
+          await message.channel.send(f'{lift}: {userPRs_dict[lift]}')
+    else:
+      await message.channel.send("No lifts recorded")
+      
+      
 # Keeps Bot Up 24/7
 keep_alive.keep_alive()
 
