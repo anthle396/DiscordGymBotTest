@@ -61,6 +61,7 @@ async def on_message(message):
     
       # lowercases user command cause bot is dumb as fuck
       msg = (message.content).lower()
+      
       if msg == "!bench" or msg == "!squat" or msg == "!deadlift" or msg == "!pullups" or msg == "!pushups":
         if msg.startswith('!bench'):
           await message.channel.send('### You have chosen bench. Enter your PR (!pr "num"):')
@@ -95,7 +96,7 @@ async def on_message(message):
 
   # hidden easter egg
   elif msg.startswith('!fuck you') or msg.startswith('!fuckyou'):
-    await message.channel.send('### NO FUCK YOU {message.author.mention} BITCH!')
+    await message.channel.send(f'### NO FUCK YOU {message.author.mention} BITCH!')
 
 
 
