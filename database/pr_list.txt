@@ -1,0 +1,1 @@
+{'User': '<@181149064866299904>', 'Bench': '225', 'Squat': None, 'Deadlift': None, 'Pullups': None, 'Pushups': None}|{'User': '<@171370090317479937>', 'Bench': '999', 'Squat': None, 'Deadlift': None, 'Pullups': None, 'Pushups': None}|{'User': '<@122779176842297346>', 'Bench': '100', 'Squat': None, 'Deadlift': None, 'Pullups': None, 'Pushups': None}|

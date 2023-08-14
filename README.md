@@ -13,3 +13,8 @@ and then copy the token for your bot and added it as a secret with the key of `T
 If you get the following error message while trying to start the server: `429 Too Many Requests` (accompanied by a lot of HTML code), 
 try the advice given in this Stackoverflow question:
 https://stackoverflow.com/questions/66724687/in-discord-py-how-to-solve-the-error-for-toomanyrequests
+curl $REPLIT_DB_URL -d 'key = value'
+curl $REPLIT_DB_URL -d 'Bench = 205'
+curl $REPLIT_DB_URL -d 'Bench = 205'
+curl $REPLIT_DB_URL/bench
+curl $REPLIT_DB_URL/Bench
