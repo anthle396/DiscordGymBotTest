@@ -1,0 +1,9 @@
+CURRENTLY DEFAULTED TO LBS
+--------------------------
+"!help" - Displays the commands that can be used.
+"!hello" - Displays hello to the you.
+"!storepr" - Displays all options to store for PRs
+"!stats" - Displays user\'s PR\'s. 
+"!conversions" - Displays all possible conversions
+"!leaderboard" - Displays the leaderboard of PRs of everyone # Note that
+this takes a litle longer to load

@@ -1,0 +1,1 @@
+{'User': '<@181149064866299904>', 'Age (year)': '21', 'Gender (m/f)': 'm', 'Height (in)': 74.0, 'Weight (lbs)': '175.0', 'Activity (days)': '6.0'}|{'User': '<@192518771955597313>', 'Age (year)': '22', 'Gender (m/f)': 'm', 'Height (in)': 70.0, 'Weight (lbs)': '160.0', 'Activity (days)': None}|
