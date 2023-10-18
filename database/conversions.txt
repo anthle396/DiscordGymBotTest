@@ -1,0 +1,9 @@
+"!lbstokg" - Converts lbs to kg ["lbs -> kg."]
+"!kgtolbs" - Converts kg to lbs ["kg -> lbs."]
+"!fttoin" - Converts ft to in  ## WORK IN PROGRESS
+"!intoft" - Converts in to ft ## WORK IN PROGRESS
+"!cmtoin" - Converts in to ft ## WORK IN PROGRESS
+"!mtoin" - Converts in to ft ## WORK IN PROGRESS
+"!intocm" - Converts in to ft ## WORK IN PROGRESS
+"!intom" - Converts in to ft ## WORK IN PROGRESS
+"!myheight (imperial)" ## WORK IN PROGRESS
