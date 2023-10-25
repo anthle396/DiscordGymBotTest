@@ -1,6 +1,8 @@
 # Gym Discord Bot
 ![Bot Display](GymBotTesting/Bot_Profile2.png)
 
+---
+
 ## Table of Contents
 - [Section 1: Introduction](#section-1-introduction)
 - [Section 2: How It Works](#section-2-how-it-works)
