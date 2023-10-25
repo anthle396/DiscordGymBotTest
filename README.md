@@ -1,16 +1,17 @@
 # Gym Discord Bot
+![Bot Display](GymBotTesting/Bot_Profile2.png)
 
-# Table of Contents
+## Table of Contents
 - [Section 1: Introduction](#section-1-introduction)
-- [Section 2: How It Works](#how-it-works)
+- [Section 2: How It Works](#section-2-how-it-works)
 - [Section 3: Usage](#section-3-usage)
-  - [Commands]()
-    - [Help]()
-    - [Hello]()
-    - [Storepr]()
-    - [Stats]()
-    - [Leaderboard]()
-    - [Conversions]()   
+  - [Commands](#commands)
+    - [Help](#help)
+    - [Hello](#hello)
+    - [Storepr](#storepr)
+    - [Stats](#stats)
+    - [Conversions](#conversions)
+    - [Leaderboard](#leaderboard)   
 
 ## Section 1: Introduction
 
@@ -23,10 +24,66 @@ The purpose of creating this bot was that me and my friend were always like why 
 ### Description
 This bot utilizes python to store gym personal records and displays them on discord for you to track and see eachother on the leaderboard. So far the leaderboard is on all servers that the bot is on since the database is not on a per server basis.
 
-Add image here
-![Alt Text](url)
+![Bot Display](GymBotTesting/Bot_Profile.png)
+
+`Figure 1: This is what the display would like like if the user clicked on the bot's profile.`
 
 ### Section 3: Usage
 
+### Commands
+The commands are listed as followed from [help_commands.txt](database/help_commands.txt)
 
+| Command          | Description                                         |
+|------------------|-----------------------------------------------------|
+| `!`              | All commands are started with a !                   |
+| `!help`          | Displays the commands that can be used.             |
+| `!hello`         | Displays hello to you.                              |
+| `!storepr`       | Displays all options to store for PRs.              |
+| `!stats`         | Displays user's PR's.                               |
+| `!conversions`   | Displays all possible conversions.                  |
+| `!leaderboard`   | Displays the leaderboard of PRs of everyone. Note that this takes a little longer to load. |
 
+### Here are some outputs of how the commands would be displayed to for the user:
+
+---
+
+#### Help
+![Bot Help](GymBotTesting/Help.png)
+
+`Figure 2: This will display all commands the bot has to offer from !help.`
+
+---
+
+#### Hello
+![Bot Hello](GymBotTesting/Hello.png)
+
+`Figure 3: This will greet the user if they say !hello/hi/hey.`
+
+---
+
+#### Storepr
+![Bot Storepr](GymBotTesting/storepr.png)
+![Bot Storepr](GymBotTesting/storeprbench.png)
+`Figure 4: !Storepr [lift] will store your pr stats into the database.`
+
+---
+
+#### Stats
+![Bot Stats](GymBotTesting/stats.png)
+
+`Figure 5: This will show your individual stats from the database if !stats is called.`
+
+---
+
+#### Conversions
+![Bot conversions](GymBotTesting/conversions.png)
+
+`Figure 6: !Storepr [lift] will store your pr stats into the database.`
+
+---
+
+#### Leaderboard
+![Bot Storepr](GymBotTesting/leaderboard.png)
+`Figure 7: !Leaderboard displays the ranking based on everyone in the database on who is the strongest/best`
+
+---
