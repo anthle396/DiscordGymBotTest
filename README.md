@@ -6,7 +6,7 @@
 ## Table of Contents
 - [Section 1: Introduction](#section-1-introduction)
 - [Section 2: How It Works](#section-2-how-it-works)
-- [Database](#database)
+  - [Database](#database)
 - [Section 3: Usage](#section-3-usage)
   - [Commands](#commands)
     - [Help](#help)
