@@ -26,6 +26,7 @@ This bot utilizes python to store gym personal records and displays them on disc
 
 ![Bot Display](GymBotTesting/Bot_Profile.png)
 
+
 `Figure 1: This is what the display would like like if the user clicked on the bot's profile.`
 
 ### Section 3: Usage
@@ -64,6 +65,7 @@ The commands are listed as followed from [help_commands.txt](database/help_comma
 #### Storepr
 ![Bot Storepr](GymBotTesting/storepr.png)
 ![Bot Storepr](GymBotTesting/storeprbench.png)
+
 `Figure 4: !Storepr [lift] will store your pr stats into the database.`
 
 ---
@@ -84,6 +86,7 @@ The commands are listed as followed from [help_commands.txt](database/help_comma
 
 #### Leaderboard
 ![Bot Storepr](GymBotTesting/leaderboard.png)
+
 `Figure 7: !Leaderboard displays the ranking based on everyone in the database on who is the strongest/best`
 
 ---
