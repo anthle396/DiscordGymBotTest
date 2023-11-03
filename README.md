@@ -36,11 +36,18 @@ This bot utilizes python to store gym personal records and displays them on disc
 
 ### Database
 The database works by using a .txt file which has dictionaries stored into it and has a '|' delimiter that separates between users to know that you have reached a new user.
-All this data is stored on one line so the algorithm uses function that searches the one line until it reaches the delimiter to find specified data and ',' for the data personal record type
+All this data is stored on one line so the algorithm uses function that searches the one line until it reaches the delimiter to find specified data and ',' for the data personal record type.
 
 ![Bot Display](GymBotTesting/userpr_database.png)
 
 `Figure 2: Shows the user's personal record database.`
+
+Note* PR - Personal Record
+### Order Of Database
+
+| User ID    | PR Type | data (in lbs/reps) | Delimiter | Delimiter |
+|------------| --------| -------------------|---------------|---------|
+| The discord's user id | Type of PR | The data in lbs or reps | The delimtier ',' to separate pr data types | Depending on how many pr types there are it will keep repeating pr type, data, and delimiter ',' until eventuall reaching the line which separates different user data |
 
 ### Section 3: Usage
 
