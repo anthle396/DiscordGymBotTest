@@ -16,6 +16,7 @@
     - [Conversions](#conversions)
     - [Leaderboard](#leaderboard)
 
+---
 
 ## Section 1: Introduction
 
