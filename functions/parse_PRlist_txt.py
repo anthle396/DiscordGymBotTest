@@ -213,7 +213,6 @@ def display_stats(user_id):
     raise Exception("No Health Stats Recorded")
   return stats
 
-#idk how this works, chatgpt wrote it
 def extract_data_from_entry(entry):
     # Removing curly braces from the entry
     entry = entry.strip("{}")
