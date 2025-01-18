@@ -23,7 +23,7 @@
 ### Introduction/Inspiration
 The idea for this bot came from me and my friend constantly wondering why there wasn’t a Discord bot to track gym statistics. As gym enthusiasts and coders, we decided it was time to change that. I didn’t want to host the bot on my own computer, so I found a site called Repl.it, which acts as a cloud-based IDE that can compile, run, and store my code. After doing some research, I discovered I could keep the bot running 24/7 by using another service called Uptime.com to monitor the website.
 
-Since I wasn’t familiar with storing databases, I reached out to a friend who had experience in this area. He suggested using simple .txt file as a start, as he’d used them in a class before. While this project isn’t for professional use and might have some bugs or lack polished visuals, it’s been a great learning experience and a fun way to bring our idea to life.*
+Since I wasn’t familiar with storing databases, I reached out to a friend who had experience in this area. He suggested using simple .txt file as a start, as he’d used them in a class before. While this project isn’t for professional use and might have some bugs or lack polished visuals, it’s been a great learning experience and a fun way to bring our idea to life.
 
 ### Section 2: How It Works
 
